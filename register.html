@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register — Campus Connect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="project-panel.html">Campus Connect</a>
+    <nav class="nav-links">
+      <a href="project-panel.html">Project panel</a>
+      <a href="index.html">Post opportunity</a>
+      <a href="register.html" class="active">Register</a>
+    </nav>
+  </div>
+</header>
+
+<main class="auth-wrap">
+  <h1>Create your account</h1>
+  <p class="lede">Register once as a student or faculty member to post and track opportunities on Campus Connect.</p>
+
+  <form id="registerForm" novalidate>
+
+    <div class="role-toggle" role="radiogroup" aria-label="Account type">
+      <input type="radio" id="role-student" name="role" value="student" checked>
+      <label class="role-card" for="role-student">
+        <span class="role-name">Student</span>
+        <span class="role-sub">Browse &amp; post opportunities</span>
+      </label>
+
+      <input type="radio" id="role-faculty" name="role" value="faculty">
+      <label class="role-card" for="role-faculty">
+        <span class="role-name">Faculty</span>
+        <span class="role-sub">Verify &amp; publish posts</span>
+      </label>
+    </div>
+
+    <label for="fullName">Full name</label>
+    <input type="text" id="fullName" name="full_name" maxlength="100" placeholder="As per college records" required>
+
+    <label for="prn">PRN</label>
+    <input type="text" id="prn" name="prn" maxlength="20" placeholder="e.g. 22070123456" required>
+    <span class="field-note">Your Permanent Registration Number — also used to log in.</span>
+
+    <label for="password">Password</label>
+    <div class="password-row">
+      <input type="password" id="password" name="password" minlength="8" placeholder="At least 8 characters" required>
+      <button type="button" class="toggle-pass" data-target="password">Show</button>
+    </div>
+
+    <label for="confirmPassword">Confirm password</label>
+    <div class="password-row">
+      <input type="password" id="confirmPassword" name="confirm_password" minlength="8" placeholder="Re-enter your password" required>
+      <button type="button" class="toggle-pass" data-target="confirmPassword">Show</button>
+    </div>
+    <span class="match-hint" id="matchHint"></span>
+
+    <button type="submit" class="submit-btn" id="registerBtn">
+      <span>Create account</span>
+    </button>
+    <div id="registerMessage" class="form-message" role="status" aria-live="polite"></div>
+  </form>
+
+  <p class="auth-footnote">Already registered? <a href="login.html">Log in instead</a></p>
+</main>
+
+<script src="auth.js"></script>
+</body>
+</html>
