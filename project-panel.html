@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project panel — Campus Connect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="project-panel.html">Campus Connect</a>
+    <nav class="nav-links">
+      <a href="project-panel.html" class="active">Project panel</a>
+      <a href="index.html">Post opportunity</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </div>
+</header>
+
+<main class="panel-wrap">
+
+  <div class="panel-head">
+    <div>
+      <h1>Project panel</h1>
+      <p>Every approved hackathon, internship, and event in one place. Found something worth sharing? Post it, and give it a push on X or Instagram.</p>
+    </div>
+    <a href="index.html" class="panel-cta">+ Post an opportunity</a>
+  </div>
+
+  <div class="panel-toolbar">
+    <input type="text" id="searchInput" placeholder="Search by title or company…">
+    <select id="categoryFilter">
+      <option value="">All categories</option>
+      <option>Internship</option>
+      <option>Hackathon</option>
+      <option>Coding Competition</option>
+      <option>Workshop</option>
+      <option>Webinar</option>
+      <option>Certification</option>
+      <option>Placement Drive</option>
+      <option>Campus Event</option>
+    </select>
+    <select id="sortFilter">
+      <option value="deadline">Sort by deadline</option>
+      <option value="newest">Newest first</option>
+    </select>
+  </div>
+
+  <div class="panel-grid" id="panelGrid">
+    <!-- Cards injected by project-panel.js -->
+  </div>
+
+  <p class="panel-empty" id="panelEmpty" hidden>No opportunities match that search yet — be the first to post one.</p>
+
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script src="project-panel.js"></script>
+</body>
+</html>
